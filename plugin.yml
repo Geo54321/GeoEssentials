@@ -1,5 +1,5 @@
 name: GeoEssentials
-version: 0.0.3
+version: 0.0.4
 author: Geo 'Derp' 54321
 main: me.Geo54321.GeoEssentials.Main
 api-version: 1.16
@@ -10,97 +10,97 @@ commands:
     description: Returns the player to their previous location
     aliases:
       return
-    permission: GeoPlugin.functional.back
+    permission: GeoEssentials.player.back
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /back"
   geotp:
     description: Better TP command with dimension teleporting
     aliases:
       gtp
-    permission: GeoPlugin.staff.geotp
+    permission: GeoEssentials.staff.geotp
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /geotp <x> <y> <z> [dimension id] [target]"
   home:
     description: Player specific warps
     aliases:
       h
-    permission: GeoPlugin.functional.home
+    permission: GeoEssentials.player.home
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /home [name] [get/set/remove/update] [player]"
   mark:
     description: Marks a location for later
     aliases:
       loc
-    permission: GeoPlugin.functional.mark
+    permission: GeoEssentials.player.mark
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /mark [name] [set/remove/update]"
   sudo:
     description: Forces another user to run a command
-    permission: GeoPlugin.staff.sudo
+    permission: GeoEssentials.staff.sudo
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /sudo <target> <command to sudo> [command arguments]"
   warp:
     description: Create and go to shared locations
-    permission: GeoPlugin.functional.warp
+    permission: GeoEssentials.player.warp
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /warp [name] [get/set/remove/update]"
   spawn:
     description: Teleports the user to the overworld spawn
-    permission: GeoPlugin.functional.spawn
+    permission: GeoEssentials.player.spawn
     permission-message: I need to ask you to stop. That... command... is making people nervous.
     usage: "Usage: /spawn"
 permissions:
-  GeoPlugin.functional.back:
+  GeoEssentials.player.back:
     description: Allows back command
     default: not op
-  GeoPlugin.functional.home:
+  GeoEssentials.player.home:
     description: Allows home command
     default: not op
-  GeoPlugin.functional.mark:
+  GeoEssentials.player.mark:
     description: Allows mark command
     default: not op
-  GeoPlugin.functional.warp:
+  GeoEssentials.player.warp:
     description: Allows warp command
     default: not op
-  GeoPlugin.functional.spawn:
+  GeoEssentials.player.spawn:
     description: Allows spawn command
     default: not op
-  GeoPlugin.functional.*:
-    description: Allows functional commands
+  GeoEssentials.player.*:
+    description: Allows player commands
     default: not op
     children:
-      GeoPlugin.functional.back: true
-      GeoPlugin.functional.home: true
-      GeoPlugin.functional.mark: true
-      GeoPlugin.functional.spawn: true
-      GeoPlugin.functional.warp: true
-  GeoPlugin.staff.geotp:
+      GeoEssentials.player.back: true
+      GeoEssentials.player.home: true
+      GeoEssentials.player.mark: true
+      GeoEssentials.player.spawn: true
+      GeoEssentials.player.warp: true
+  GeoEssentials.staff.geotp:
     description: Allows geotp command
     default: op
-  GeoPlugin.staff.home:
+  GeoEssentials.staff.home:
     description: Allows access to others homes
     default: op
-  GeoPlugin.staff.liz:
+  GeoEssentials.staff.liz:
     description: Allows liz targetted
     default: op
-  GeoPlugin.staff.sudo:
+  GeoEssentials.staff.sudo:
     description: Allows sudo command
     default: op
-  GeoPlugin.staff.warp:
+  GeoEssentials.staff.warp:
     description: Allows warp creation/deletion
     default: op
-  GeoPlugin.staff.*:
+  GeoEssentials.staff.*:
     description: Allows staff commands
     default: op
     children:
-      GeoPlugin.staff.geotp: true
-      GeoPlugin.staff.home: true
-      GeoPlugin.staff.liz: true
-      GeoPlugin.staff.sudo: true
-      GeoPlugin.staff.warp: true
-  GeoPlugin.*:
+      GeoEssentials.staff.geotp: true
+      GeoEssentials.staff.home: true
+      GeoEssentials.staff.liz: true
+      GeoEssentials.staff.sudo: true
+      GeoEssentials.staff.warp: true
+  GeoEssentials.*:
     description: Wildcard permission
     default: op
     children:
-      GeoPlugin.functional.*: true
-      GeoPlugin.staff.*: true
+      GeoEssentials.player.*: true
+      GeoEssentials.staff.*: true
