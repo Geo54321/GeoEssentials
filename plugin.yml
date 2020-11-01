@@ -1,5 +1,5 @@
 name: GeoEssentials
-version: 0.0.4
+version: 0.0.5
 author: Geo 'Derp' 54321
 main: me.Geo54321.GeoEssentials.Main
 api-version: 1.16
@@ -26,7 +26,7 @@ commands:
       h
     permission: GeoEssentials.player.home
     permission-message: I need to ask you to stop. That... command... is making people nervous.
-    usage: "Usage: /home [name] [get/set/remove/update] [player]"
+    usage: "Usage: /home [name] [get/set/remove/update] [target]"
   mark:
     description: Marks a location for later
     aliases:
@@ -80,9 +80,6 @@ permissions:
   GeoEssentials.staff.home:
     description: Allows access to others homes
     default: op
-  GeoEssentials.staff.liz:
-    description: Allows liz targetted
-    default: op
   GeoEssentials.staff.sudo:
     description: Allows sudo command
     default: op
@@ -95,7 +92,6 @@ permissions:
     children:
       GeoEssentials.staff.geotp: true
       GeoEssentials.staff.home: true
-      GeoEssentials.staff.liz: true
       GeoEssentials.staff.sudo: true
       GeoEssentials.staff.warp: true
   GeoEssentials.*:
