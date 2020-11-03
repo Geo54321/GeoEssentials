@@ -47,8 +47,8 @@ public class Main extends JavaPlugin {
         if(getConfig().getBoolean("modules.lily-pad-duplicating")) {
             getServer().getPluginManager().registerEvents(new LilyPadListener(), this);
         }
-        if(getConfig().getBoolean("modules.lily-pad-duplicating")) {
-            getServer().getPluginManager().registerEvents(new LilyPadListener(), this);
+        if(getConfig().getBoolean("modules.spawn-tp")) {
+            this.getCommand("spawn").setExecutor(new Spawn());
         }
     }
 
